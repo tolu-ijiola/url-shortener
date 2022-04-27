@@ -1,0 +1,103 @@
+$color-primary: #ffc107;
+$gray: gray;
+$red: red;
+$mobile: 700px;
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+
+  input, button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  h1{
+    color: $color-primary;
+    font-size: 50px;
+  }
+
+  p{
+    color: $gray;
+  }
+
+  .error{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: $red;
+  }
+
+  .card{
+    padding: 20px;
+    width: 75vw;
+
+    @media (max-width: $mobile) {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+
+  .textinput{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffc10710;
+
+    @media (max-width: $mobile) {
+        display: block;
+        padding: 20px;
+        background-color: #ffc10710;
+      }
+
+    button{
+      background: $color-primary;
+      width: 150px;
+      padding: 15px;
+      text-transform: capitalize;
+
+      @media (max-width: $mobile) {
+        background: $color-primary;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .icon{
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+  }
+  
+  .icon:hover{
+    color: $color-primary;
+  }
+
+  .result:hover .icon{
+    display: block;
+  }
+
+  .result{
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
+
+    p{
+      margin-left: 20px;
+
+      @media (max-width: $mobile) {
+        margin-left: 0;
+      }
+    }
+  }
+}
